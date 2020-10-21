@@ -69,7 +69,7 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8800 3200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:USB_A JUSB1
+L electricpanelinput-rescue:USB_A-Connector JUSB1
 U 1 1 5F3256A2
 P 2150 1500
 F 0 "JUSB1" H 2207 1967 50  0000 C CNN
@@ -135,8 +135,6 @@ F 3 "~" H 1650 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 5250 6600 5800
-Wire Wire Line
 	6600 5800 5900 5800
 Wire Wire Line
 	5900 5800 5900 6250
@@ -147,8 +145,6 @@ Wire Wire Line
 Wire Wire Line
 	5900 6350 6100 6350
 Connection ~ 5900 6250
-Wire Wire Line
-	9300 5250 9300 5700
 Wire Wire Line
 	9300 5700 8600 5700
 Wire Wire Line
@@ -163,19 +159,6 @@ Connection ~ 8600 6050
 Wire Wire Line
 	3400 6200 3400 6300
 Connection ~ 3400 6200
-Wire Wire Line
-	4200 5700 3400 5700
-$Comp
-L Relay:SANYOU_SRD_Form_C Relay1
-U 1 1 5F32050B
-P 4000 4950
-F 0 "Relay1" H 4430 4996 50  0000 L CNN
-F 1 "SANYOU_SRD_Form_C" H 4430 4905 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 4450 4900 50  0001 L CNN
-F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 4000 4950 50  0001 C CNN
-	1    4000 4950
-	1    0    0    -1  
-$EndComp
 $Comp
 L pspice:0 #GND0101
 U 1 1 5F33E4EF
@@ -201,8 +184,6 @@ $EndComp
 Wire Wire Line
 	3800 5250 3800 5450
 Wire Wire Line
-	4200 5250 4200 5700
-Wire Wire Line
 	2450 5250 2450 4350
 Wire Wire Line
 	3800 4350 3800 4650
@@ -220,12 +201,12 @@ Wire Wire Line
 	4100 4650 4100 4350
 Connection ~ 4100 4350
 Wire Wire Line
-	4100 4350 5800 4350
+	4100 4350 5700 4350
 Wire Wire Line
 	6500 4650 6500 4350
 Connection ~ 6500 4350
 Wire Wire Line
-	6500 4350 8500 4350
+	6500 4350 8400 4350
 Wire Wire Line
 	9200 4650 9200 4350
 Wire Wire Line
@@ -327,7 +308,7 @@ Electric panel input Confiared
 Text Notes 10600 7650 0    50   ~ 0
 1.0\n
 Wire Wire Line
-	3000 4350 3500 4350
+	3000 4350 3400 4350
 Connection ~ 3000 4350
 Wire Wire Line
 	2450 4350 3000 4350
@@ -403,78 +384,75 @@ Connection ~ 3900 1500
 Wire Wire Line
 	3900 1500 3900 1600
 $Comp
-L Connector_Generic:Conn_01x01 J10
+L Connector_Generic:Conn_01x02 J10
 U 1 1 5F333494
 P 5800 4650
 F 0 "J10" V 5672 4730 50  0000 L CNN
 F 1 "Blu-" V 5763 4730 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5800 4650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 4650 50  0001 C CNN
 F 3 "~" H 5800 4650 50  0001 C CNN
 	1    5800 4650
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J11
+L Connector_Generic:Conn_01x02 J11
 U 1 1 5F334231
 P 5800 5050
 F 0 "J11" V 5764 4962 50  0000 R CNN
 F 1 "Blu+" V 5673 4962 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5800 5050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5800 5050 50  0001 C CNN
 F 3 "~" H 5800 5050 50  0001 C CNN
 	1    5800 5050
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J9
+L Connector_Generic:Conn_01x02 J9
 U 1 1 5F33543C
-P 3500 4550
-F 0 "J9" V 3372 4630 50  0000 L CNN
-F 1 "CRE-" V 3463 4630 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3500 4550 50  0001 C CNN
-F 3 "~" H 3500 4550 50  0001 C CNN
-	1    3500 4550
+P 3500 4600
+F 0 "J9" V 3372 4680 50  0000 L CNN
+F 1 "CRE-" V 3463 4680 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3500 4600 50  0001 C CNN
+F 3 "~" H 3500 4600 50  0001 C CNN
+	1    3500 4600
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J8
+L Connector_Generic:Conn_01x02 J8
 U 1 1 5F33650C
-P 3450 5000
-F 0 "J8" V 3414 4912 50  0000 R CNN
-F 1 "CRE+" V 3323 4912 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3450 5000 50  0001 C CNN
-F 3 "~" H 3450 5000 50  0001 C CNN
-	1    3450 5000
+P 3400 5000
+F 0 "J8" V 3364 4912 50  0000 R CNN
+F 1 "CRE+" V 3273 4912 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3400 5000 50  0001 C CNN
+F 3 "~" H 3400 5000 50  0001 C CNN
+	1    3400 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J12
+L Connector_Generic:Conn_01x02 J12
 U 1 1 5F33818C
 P 8500 4600
 F 0 "J12" V 8372 4680 50  0000 L CNN
 F 1 "Vic-" V 8463 4680 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8500 4600 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8500 4600 50  0001 C CNN
 F 3 "~" H 8500 4600 50  0001 C CNN
 	1    8500 4600
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J13
+L Connector_Generic:Conn_01x02 J13
 U 1 1 5F338CD6
 P 8500 4950
 F 0 "J13" V 8464 4862 50  0000 R CNN
 F 1 "Vic+" V 8373 4862 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 8500 4950 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8500 4950 50  0001 C CNN
 F 3 "~" H 8500 4950 50  0001 C CNN
 	1    8500 4950
 	0    -1   -1   0   
 $EndComp
-Connection ~ 3500 4350
 Wire Wire Line
 	3500 4350 3800 4350
 Wire Wire Line
 	3300 3300 3300 5550
-Wire Wire Line
-	3450 5200 3650 5200
 Wire Wire Line
 	3650 5200 3650 5450
 Wire Wire Line
@@ -487,14 +465,14 @@ Wire Wire Line
 Wire Wire Line
 	5800 5250 5800 5350
 Wire Wire Line
-	5800 5350 6200 5350
+	5800 5350 5900 5350
 Connection ~ 6200 5350
 Wire Wire Line
 	6200 5350 6200 5250
 Wire Wire Line
 	8500 5150 8500 5250
 Wire Wire Line
-	8500 5250 8900 5250
+	8500 5250 8600 5250
 Connection ~ 8900 5250
 Wire Wire Line
 	8500 4400 8500 4350
@@ -577,4 +555,95 @@ Wire Wire Line
 Wire Wire Line
 	6900 3500 6900 3600
 Connection ~ 6900 3600
+$Comp
+L Device:R R1
+U 1 1 5F90B25D
+P 4200 5500
+F 0 "R1" H 4270 5546 50  0000 L CNN
+F 1 "1k" H 4270 5455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4130 5500 50  0001 C CNN
+F 3 "~" H 4200 5500 50  0001 C CNN
+	1    4200 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F90BC54
+P 6600 5550
+F 0 "R2" H 6670 5596 50  0000 L CNN
+F 1 "1k" H 6670 5505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 5550 50  0001 C CNN
+F 3 "~" H 6600 5550 50  0001 C CNN
+	1    6600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay:SANYOU_SRD_Form_C Relay1
+U 1 1 5F32050B
+P 4000 4950
+F 0 "Relay1" H 4430 4996 50  0000 L CNN
+F 1 "SANYOU_SRD_Form_C" H 4430 4905 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 4450 4900 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 4000 4950 50  0001 C CNN
+	1    4000 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5700 3400 5700
+Wire Wire Line
+	9300 5650 9300 5700
+Wire Wire Line
+	9300 5250 9300 5350
+Wire Wire Line
+	6600 5250 6600 5400
+Wire Wire Line
+	6600 5700 6600 5800
+Wire Wire Line
+	4200 5250 4200 5350
+Wire Wire Line
+	4200 5650 4200 5700
+$Comp
+L Device:R R3
+U 1 1 5F90C5CB
+P 9300 5500
+F 0 "R3" H 9370 5546 50  0000 L CNN
+F 1 "1k" H 9370 5455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9230 5500 50  0001 C CNN
+F 3 "~" H 9300 5500 50  0001 C CNN
+	1    9300 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 5150 8600 5250
+Connection ~ 8600 5250
+Wire Wire Line
+	8600 5250 8900 5250
+Wire Wire Line
+	8400 4400 8400 4350
+Connection ~ 8400 4350
+Wire Wire Line
+	8400 4350 8500 4350
+Wire Wire Line
+	5900 5250 5900 5350
+Connection ~ 5900 5350
+Wire Wire Line
+	5900 5350 6200 5350
+Wire Wire Line
+	5700 4450 5700 4350
+Connection ~ 5700 4350
+Wire Wire Line
+	5700 4350 5800 4350
+Wire Wire Line
+	3400 4400 3400 4350
+Wire Wire Line
+	3500 4350 3500 4400
+Wire Wire Line
+	3500 4350 3400 4350
+Connection ~ 3500 4350
+Connection ~ 3400 4350
+Connection ~ 3500 5200
+Wire Wire Line
+	3500 5200 3650 5200
+Wire Wire Line
+	3400 5200 3500 5200
 $EndSCHEMATC
